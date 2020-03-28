@@ -15,7 +15,8 @@ const config = {
       children: false,
       exclude: [/node_modules/]
     })
-  ]
+  ],
+  externals: ['single-spa', 'vue', 'vue-router', /^@mf\/.+$/]
 }
 
 module.exports = config

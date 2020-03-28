@@ -17,3 +17,4 @@ Vue.config.productionTip = false
 // }
 
 export const components = { HelloWorld }
+export * from './utils'

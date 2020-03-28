@@ -4,11 +4,9 @@ import singleSpaVue from 'single-spa-vue'
 import App from './App.vue'
 import router from './router'
 
-import * as shared from '@mf/shared-dependencies-vue'
+import { mfMode } from '@mf/shared-dependencies-vue'
 
 Vue.config.productionTip = false
-
-console.log(shared)
 
 const vueOptions = {
   router,
@@ -16,7 +14,7 @@ const vueOptions = {
 }
 
 // 判断当前页面使用singleSpa应用,不是就渲染
-if (!window.singleSpaNavigate) {
+if (!mfMode()) {
   delete vueOptions.el
   new Vue(vueOptions).$mount('#app')
 }

@@ -24,4 +24,7 @@ registerApplication(
   isActive.navbar
 )
 
+// global flg
+sessionStorage.setItem('mfMode', true)
+
 start()
